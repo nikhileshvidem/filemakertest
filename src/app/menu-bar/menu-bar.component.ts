@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MenuService } from '../menu.service';
 @Component({
   selector: 'filemaker-menu-bar',
   templateUrl: './menu-bar.component.html',
@@ -7,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
  appName = 'FileMaker';
-  constructor() { }
+ menuArray;
+  constructor(private menuservice:MenuService) {
+    this.menuservice.getMenuData().subscribe(data =>{
+      this.menuArray = data;
+   });
+   }
 
   ngOnInit() {
   }

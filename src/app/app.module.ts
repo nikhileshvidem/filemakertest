@@ -9,6 +9,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { RightPanelComponent } from './right-panel/right-panel.component';
 import { MainContentComponent } from './main-content/main-content.component';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainContentComponent } from './main-content/main-content.component';
     MainContentComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
